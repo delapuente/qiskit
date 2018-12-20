@@ -4,6 +4,7 @@ matrix:
   fast_finish: true
   include:
     - python: "3.5"
+      sudo: true
       env: TOXENV=py35
     - python: "3.6"
       env: TOXENV=py36
