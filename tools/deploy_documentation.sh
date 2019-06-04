@@ -22,7 +22,7 @@ SOURCE_DIR=`pwd`
 TRANSLATION_LANG='ja'
 
 SOURCE_REPOSITORY="git@github.com:SooluThomas/qiskit.git"
-TARGET_BRANCH_PO="translationDocs"
+TARGET_BRANCH_PO="poRepo"
 # DOC_DIR_1="docs/_build/gettext"
 DOC_DIR_2="docs/locale"
 
