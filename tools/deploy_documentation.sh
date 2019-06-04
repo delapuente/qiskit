@@ -23,7 +23,6 @@ TRANSLATION_LANG='ja'
 
 SOURCE_REPOSITORY="git@github.com:SooluThomas/qiskit.git"
 TARGET_BRANCH_PO="poRepo"
-# DOC_DIR_1="docs/_build/gettext"
 DOC_DIR_2="docs/locale"
 
 # Build the documentation.
@@ -36,6 +35,7 @@ pwd
 
 echo "cd docs"
 cd docs
+
 # Extract document's translatable messages into pot files
 # https://sphinx-intl.readthedocs.io/en/master/quickstart.html
 echo "Extract document's translatable messages into pot files: "
@@ -44,11 +44,6 @@ sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext/$TRANSLAT
 # Setup / Update po files
 echo "Setup / Update po files"
 sphinx-intl update -p _build/gettext -l $TRANSLATION_LANG
-
-# Make translated document
-# make -e SPHINXOPTS="-Dlanguage='ja'" html
-echo "Make translated document"
-sphinx-build -b html -D language=$TRANSLATION_LANG . _build/html/locale/$TRANSLATION_LANG
 
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
@@ -76,12 +71,10 @@ git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/*.po
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
-# cp -r $SOURCE_DIR/$DOC_DIR_1/ $DOC_DIR_1/
 cp -r $SOURCE_DIR/$DOC_DIR_2/ $DOC_DIR_2/
 
 # git checkout translationDocs
 echo "add to po files to target dir"
-# git add -f $DOC_DIR_1
 git add $DOC_DIR_2
 
 # Commit and push the changes.
@@ -111,7 +104,6 @@ git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
     $TARGET_DOC_DIR/ignis
 
 # Copy the new rendered files and add them to the commit.
-# mkdir -p $TARGET_DOC_DIR
 echo "copy directory"
 cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
 
