@@ -22,8 +22,8 @@ SOURCE_DIR=`pwd`
 TRANSLATION_LANG='ja'
 
 SOURCE_REPOSITORY="git@github.com:SooluThomas/qiskit.git"
-SOURCH_BRANCH="translationDocs"
-DOC_DIR_1="docs/_build/gettext"
+TARGET_BRANCH_PO="translationDocs"
+# DOC_DIR_1="docs/_build/gettext"
 DOC_DIR_2="docs/locale"
 
 # Build the documentation.
@@ -65,30 +65,31 @@ echo "end of configuring ssh"
 cd ..
 pwd
 echo "git clone for working repo"
-git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $SOURCH_BRANCH
+git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
 cd temp
 git branch
 git config user.name "SooluThomas"
 git config user.email "soolu.elto@gmail.com"
 
+echo "git rm -rf"
+git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/*.po
+
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
-# mkdir $DOC_DIR_1
-cp -r $SOURCE_DIR/$DOC_DIR_1/ $DOC_DIR_1/
-# mkdir $DOC_DIR_2
+# cp -r $SOURCE_DIR/$DOC_DIR_1/ $DOC_DIR_1/
 cp -r $SOURCE_DIR/$DOC_DIR_2/ $DOC_DIR_2/
 
 # git checkout translationDocs
-echo "add to pot files to target dir"
-git add -f $DOC_DIR_1
+echo "add to po files to target dir"
+# git add -f $DOC_DIR_1
 git add $DOC_DIR_2
 
 # Commit and push the changes.
 echo "git commit"
-git commit -m "Automated documentation update to add .po and .pot files from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH
-echo "********** End of pushing po and pot files to working repo! *************"
+echo "********** End of pushing po to working repo! *************"
 
 # Clone the landing page repository.
 cd ..
