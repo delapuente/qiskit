@@ -67,7 +67,15 @@ git config user.name "SooluThomas"
 git config user.email "soolu.elto@gmail.com"
 
 echo "git rm -rf"
-git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po
+# git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po
+it rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/_* \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/aer \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/autodoc \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/aqua \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/terra \
+    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/ignis
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
