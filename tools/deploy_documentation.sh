@@ -67,7 +67,7 @@ git config user.name "SooluThomas"
 git config user.email "soolu.elto@gmail.com"
 
 echo "git rm -rf"
-git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/*.po
+git rm -rf --ignore-unmatch docs/$DOC_DIR_2/$TRANSLATION_LANG/**/*.po
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
@@ -76,6 +76,7 @@ cp -r $SOURCE_DIR/$DOC_DIR_2/ $DOC_DIR_2/
 # git checkout translationDocs
 echo "add to po files to target dir"
 git add $DOC_DIR_2
+tree
 
 # Commit and push the changes.
 echo "git commit"
