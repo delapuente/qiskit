@@ -76,13 +76,14 @@ cp -r $SOURCE_DIR/$DOC_DIR_2/ $DOC_DIR_2/
 # git checkout translationDocs
 echo "add to po files to target dir"
 git add $DOC_DIR_2
-tree
+ls
 
 # Commit and push the changes.
 echo "git commit"
 git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH
+ls
 echo "********** End of pushing po to working repo! *************"
 
 # Clone the landing page repository.
