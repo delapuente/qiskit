@@ -43,7 +43,7 @@ sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext/$TRANSLAT
 
 # Setup / Update po files
 echo "Setup / Update po files"
-sphinx-intl update -p _build/gettext -l $TRANSLATION_LANG
+sphinx-intl update -p _build/gettext -l en
 
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
