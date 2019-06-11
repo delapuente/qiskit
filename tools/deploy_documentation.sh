@@ -39,7 +39,7 @@ cd docs
 # Extract document's translatable messages into pot files
 # https://sphinx-intl.readthedocs.io/en/master/quickstart.html
 echo "Extract document's translatable messages into pot files: "
-sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext/$TRANSLATION_LANG
+sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
 
 # Setup / Update po files
 echo "Setup / Update po files"
