@@ -70,13 +70,13 @@ git config user.email "qiskit@qiskit.org"
 echo "git rm -rf for the translation po files"
 # git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po
 git rm -rf --ignore-unmatch $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/_* \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/aer \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/autodoc \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/aqua \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/terra \
-    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/ignis
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/*.po \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/_* \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/aer \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/autodoc \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/aqua \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/terra \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/ignis
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
