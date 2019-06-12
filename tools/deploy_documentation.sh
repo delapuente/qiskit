@@ -19,6 +19,7 @@ TARGET_REPOSITORY="git@github.com:SooluThomas/testTranslation.git"
 TARGET_DOC_DIR="."
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
+SOURCE_LANG='en'
 TRANSLATION_LANG='ja'
 
 SOURCE_REPOSITORY="git@github.com:SooluThomas/qiskit.git"
@@ -66,16 +67,16 @@ git branch
 git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
-echo "git rm -rf for the tramslation po files"
+echo "git rm -rf for the translation po files"
 # git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po
-git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/_* \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/aer \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/autodoc \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/aqua \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/terra \
-    $DOC_DIR_2/$TRANSLATION_LANG/LC_MESSAGES/$TRANSLATION_LANG/ignis
+git rm -rf --ignore-unmatch $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/*.po \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/_* \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/aer \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/autodoc \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/aqua \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/terra \
+    $DOC_DIR_2/$SOURCE_LANG/LC_MESSAGES/$TRANSLATION_LANG/ignis
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
