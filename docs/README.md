@@ -31,3 +31,45 @@ window:
 
 This will build a styled, HTML version of your local documentation repository
 in the subdirectory `/docs/_build/html/`.
+
+# Translating Documentation
+
+The Qiskit community translates its documentation with `Crowdin
+<https://crowdin.com/>`__, an open source tool built by a team dedicated to make
+translation and localization as easy as possible for thousands of people.
+
+Translations are not written directly to the Qiskit GitHub repo, as you might
+contribute code. Instead, all translation work is done within Crowdin.
+
+## Joining the QiskitDocs Crowdin Project
+
+Step 1. [Create a Crowdin account](https://crowdin.com/join).
+
+Step 2. Search for the QiskitDocs project, or [navigate directly to it](https://crowdin.com/project/qiskitdocs).
+
+Step 3. Select a language.
+
+Step 4. Click **Join**.
+
+The translation lead for your language will be notified of your request to join
+and guide you through the license agreement process. We'll be working to make
+this process more automatic in the future.
+
+## Translation Workflow
+
+Step 1. [Log in to Crowdin](https://crowdin.com/login>).
+
+Step 2. [Navigate to the QiskitDocs project](https://crowdin.com/project/qiskitdocs).
+
+Step 3. Choose your language.
+
+Step 4. Choose a portable object (PO) file to translate.
+
+Step 5. Review the **SOURCE STRING**.
+
+Step 6. Write your translation of the source string. Refer to the translation
+memory (**TM**) and machine translation (**MT**) to potentially make your work
+easier.
+
+Step 7. Click **SAVE**.
+
