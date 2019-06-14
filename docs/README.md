@@ -40,8 +40,7 @@ in the subdirectory `/docs/_build/html/`.
 
 # Translating Documentation
 
-The Qiskit community translates its documentation with [Crowdin](https://crowdin.com/), 
-an open source tool built by a team dedicated to make
+The Qiskit community translates its documentation with [Crowdin](https://crowdin.com/), an open source tool built by a team dedicated to make
 translation and localization as easy as possible for thousands of people.
 
 Translations are not written directly to the Qiskit GitHub repo, as you might
