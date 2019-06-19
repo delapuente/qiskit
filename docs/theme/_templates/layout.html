@@ -111,18 +111,19 @@
       var changeLoc = function(evt) {
         var language = evt.target.options[el.selectedIndex].value;
         if (language === 'ja') {
-          window.location.href = '/testTranslation/locale/ja';
+          window.location.href = '/locale/ja';
 
         }
         if (language === 'en') {
-          window.location.href = '/testTranslation';
+          window.location.href = '/';
         }
       };
       el.addEventListener('change', changeLoc);
 
       var changeSelect = function(select) {
         const tokens = window.location.pathname.split('/');
-        const optionToSelect = tokens[tokens.length - 2] || 'en';
+        // const optionToSelect = tokens[tokens.length + 3] || 'en';
+        const optionToSelect = tokens[2] || 'en';
         for (var i = 0; i < select.options.length; i++) {
           var o = select.options[i];
           if (optionToSelect == o.value) {
