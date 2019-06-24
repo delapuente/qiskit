@@ -196,8 +196,9 @@ The following steps show the installation process for Ignis.
 
       pip install -e qiskit-ignis
 
+=============================
 Installing Terra from Source
-----------------------------
+=============================
 Installing from source requires that you have a c++ compiler on your system that supports
 c++-11.
 
@@ -287,8 +288,9 @@ Once the compilers are installed, you are ready to install Qiskit Terra.
 
 After you've installed Terra, you can install Aer as an add-on to run additional simulators.
 
+=====================================
 Installing IBMQ Provider from Source
-------------------------------------
+=====================================
 
 1. Clone the qiskit-ibmq-provider repository.
 
@@ -323,8 +325,9 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+===========================
 Installing Aer from Source
---------------------------
+===========================
 
 1. Clone the Aer repository.
 
@@ -601,9 +604,9 @@ A list of common options depending on platform are:
     this is just outlining it's commonly used in that environment. Refer to the
     tool documentation for more information.
 
-
+=============================
 Installing Ignis from Source
-----------------------------
+=============================
 
 1. Clone the ignis repository.
 
@@ -638,8 +641,9 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+============================
 Installing Aqua from Source
----------------------------
+============================
 
 1. Clone the Aqua repository.
 
@@ -674,8 +678,9 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+==============================
 Install Chemistry from Source
------------------------------
+==============================
 
 1. Clone the qiskit-chemistry repository.
 
