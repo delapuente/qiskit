@@ -19,7 +19,11 @@ You can build a local copy of the documentation from your local clone of the
    ```
    pip install sphinx_materialdesign_theme
    ```
+4. Install the tabbed content by running the following in a terminal window:
 
+   ```
+   pip install sphinx-tabs
+   ```
 4. Build the documentation by navigating to your local clone of `Qiskit/qiskit`
    and running the following command in a terminal window:
 
