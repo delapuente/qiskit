@@ -43,6 +43,7 @@ def _extend_html_context(app, config):
     context['current_translation'] = _get_current_translation(config)
     context['translation_url'] = partial(_get_translation_url, config)
     context['version_label'] = _get_version_label(config)
+    context['content_prefix'] = config.content_prefix
 
 def _get_current_translation(config):
     language = config.language or ''
@@ -165,4 +166,3 @@ def _get_git_tags():
         return []
 
     return stdout.decode('utf8').splitlines()
-

@@ -158,6 +158,10 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['theme/static/']
 
+html_js_files = [
+    'js/versions.js'
+]
+
 html_context = {
     'css_files': [
         '_static/css/theme-override.css',  # overrides few css in RTD Theme

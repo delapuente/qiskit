@@ -5,6 +5,9 @@
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
+    <dl>
+      <dt id="version-select">{{ _('Versions') }}</dt>
+    </dl>
     {% if translations %}
     <dl>
       <dt>{{ _('Languages') }}</dt>
@@ -14,12 +17,4 @@
     </dl>
     {% endif %}
   </div>
-  <script>
-    jQuery('.version').click((evt) => {
-      const hash = window.location.hash
-      const complete_url = evt.target.href + hash
-      window.location = complete_url
-      evt.preventDefault()
-    })
-  </script>
 </div>
