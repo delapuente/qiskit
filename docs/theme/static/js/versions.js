@@ -19,7 +19,7 @@ jQuery(() => {
   }
 
   getVersionList().then(versionList => {
-    jQuery('#version-select').after(getVersionTags(versionList))
+    jQuery('#version-switcher').after(getVersionTags(versionList))
 
     jQuery('.version').click((evt) => {
       const hash = window.location.hash
